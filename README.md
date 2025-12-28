@@ -1,12 +1,82 @@
-# React + Vite
+# ShopSphere Frontend
+Modern React e-commerce app with product browsing, cart, wishlist, filters, and checkout. Connects to ShopSphere API backend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo Link
+[Live Demo](https://e-commerce-fe-six-lake.vercel.app/)
 
-Currently, two official plugins are available:
+## Quick Start
+git clone https://github.com/Rjesh-Kumar/Shopper-FE.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+cd Shopper-FE
 
-## Expanding the ESLint configuration
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm run dev
+
+
+## Technologies
+[](https://github.com/Rjesh-Kumar/Shopper-FE#technologies)
+- React 19
+- React Router  
+- Vite  
+- Bootstrap 5  
+- Bootstrap Icons  
+- React Bootstrap  
+- Axios  
+
+## Features
+**Home (/):**  
+- Landing page with featured products  
+- Quick search and navigation  
+
+**Product Listing (/products):**  
+- Browse all products with category population  
+- Real-time search by name  
+- Advanced filters (price range, category, rating, sort)  
+- Add to cart/wishlist directly from cards  
+
+**Product Details (/product/:id):**  
+- Full product specs (price, discount, sizes, images)  
+- Quick add to cart/wishlist  
+
+**Shopping Cart (/cart):**  
+- Manage quantities and sizes  
+- Price breakdown with discounts  
+- Delivery charge calculation  
+- Proceed to checkout  
+
+**Wishlist (/wishlist):**  
+- Saved products management  
+- Move to cart option  
+
+**Profile & Checkout:**  
+- Address management (/addresses)  
+- Order history (/orders)  
+- Complete checkout flow  
+
+## API Reference
+**Backend:** https://e-commerce-be-wheat.vercel.app/
+
+GET /api/products
+
+List all products  
+Sample Response: `{ "data": { "products": [{ "_id", "name", "price", "category", "discount", ... }] } }`
+
+GET /api/categories
+
+All product categories  
+Sample Response: `{ "data": { "categories": [{ "_id", "name", "description" }] } }`
+
+POST /api/wishlist/:userId/add
+
+Add to wishlist  
+Body: `{ "productId": "..." }`
+
+POST /api/orders/:userId/create
+
+Create order from cart
+
+Create order from cart
+
+## Contact
+For bugs or feature requests: rajeshkumarrour40@gmail.com
